@@ -23,12 +23,19 @@ header {
 
 .logo {
     height: 45px;
+    cursor: pointer;
 }
 
 .container {
     flex-basis: 1200px;
     max-width: 1200px;
     margin: 0 auto;
+}
+
+h4 {
+    font-size: 1rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 
@@ -80,17 +87,30 @@ header {
 
 .scroller {
     position: absolute;
-    bottom: 24px;
+    bottom: 8px;
     left: 50%;
+    transform: translate(-50%, 0);
+    cursor: pointer;
 }
 
-.arrow {
-    margin-bottom: 56px;
+.scroller img {
+    width: 100px;
+}
+
+.scroller h5 {
+    opacity: 0;
+    text-align: center;
+    transition: 0.6s;
+}
+
+.scroller:hover h5 {
+    opacity: 0.5;
 }
 
 .sec1 .container,
 .sec2 .container,
-.sec3 .container {
+.sec3 .container,
+.sec4 .container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -98,7 +118,8 @@ header {
 
 .sec1 h1,
 .sec2 h1,
-.sec3 h1 {
+.sec3 h1,
+.sec4 h1 {
     font-size: 3rem;
     font-weight: bold;
     line-height: 1.25;
@@ -106,7 +127,8 @@ header {
 
 .sec1 h2,
 .sec2 h2,
-.sec3 h2 {
+.sec3 h2,
+.sec4 h2 {
     line-height: 1.4;
     font-weight: bold;
     font-size: 2.25rem;
@@ -116,7 +138,7 @@ header {
 .sec1 h3,
 .sec2 h3,
 .sec3 h3 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     line-height: 1.6;
     opacity: 0.663;
 }
@@ -154,15 +176,36 @@ header {
     margin-left: 120px;
 }
 
+.sec4 {
+    /* background-color: #ffffff20; */
+    background-image: linear-gradient( #97adda00, #2c639470);
+    /* background-image: url(./img/04.png); */
+    /* background-position: center; */
+    /* background-size: cover; */
+    backdrop-filter: blur(2px);
+    margin-top: 120px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border-bottom: 3px solid #ffffff; */
+    line-height: 1.6;
+}
+
+.sec4 h1 {
+    margin-bottom: 20px;
+    font-size: 4rem;
+}
+
 
 /* ------footer--------- */
 
 footer {
-    background-image: url(./img/footer-bg.png);
-    background-position: top;
+    background-image: url(./img/04.png);
+    background-position: center;
     background-size: cover;
-    height: 400px;
-    padding-top: 200px;
+    /* padding-top: 200px; */
+    height: 300px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -182,7 +225,7 @@ footer .line {
     background-color: #fff;
     opacity: 50%;
     width: 1px;
-    height: 45px;
+    height: 100px;
     margin-left: 50px;
 }
 
@@ -282,6 +325,9 @@ footer ul {
     footer ul li {
         margin-right: 20px;
     }
+    .sec4 h1 {
+        font-size: 3rem;
+    }
 }
 
 @media screen and (max-width: 414px) {
@@ -289,6 +335,6 @@ footer ul {
         font-size: 2rem;
     }
     .kv h3 {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
 }
