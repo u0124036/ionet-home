@@ -21,6 +21,28 @@ header {
     z-index: 2;
 }
 
+header .container {
+    /* flex-direction: row; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header ul {
+    display: flex;
+    flex-direction: row;
+}
+
+header ul li {
+    /* cursor: pointer; */
+    font-size: 1.2rem;
+    margin-left: 20px;
+}
+
+header ul li:hover {
+    color: burlywood;
+}
+
 .logo {
     height: 45px;
     cursor: pointer;
@@ -325,6 +347,10 @@ footer ul {
     }
     .sec4 h1 {
         font-size: 3rem;
+    }
+    header ul li {
+        width: 2rem;
+        font-size: 1rem;
     }
 }
 
